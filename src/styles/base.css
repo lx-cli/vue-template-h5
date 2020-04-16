@@ -1,0 +1,106 @@
+@charset "utf-8";
+html,
+body {
+  overflow: auto !important;
+  width:100%;background-color:#efefef;margin:0;padding:0;font-size: 0.4rem;
+  height: 100%;
+  -webkit-text-size-adjust: 100% !important;/* ios使用-webkit-text-size-adjust禁止调整字体大小 */
+}
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+address,
+em,
+img,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+i,
+b,
+s {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: "PingFang SC Medium", "Microsoft Yahei", sans-serif;
+  box-sizing: content-box;
+}
+ul,
+ol {
+  list-style: none;
+}
+a img {
+  border: none;
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+}
+button {
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  border: 0 none;
+  background-color: transparent;
+}
+button::-moz-focus-inner {
+  padding: 0;
+}
+textarea,
+input {
+  background: none;
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+input[type="password"] {
+  -webkit-text-security: disc;
+}
+textarea:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+body {
+  word-wrap: break-word;
+  font-size: 0.35rem;
+  font-family: Helvetica, Arial;
+  background-color: #fff;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* 使用媒体查询修改padfont-size以达到适配效果 */
+@media (min-width: 560px) {
+  html {
+    font-size: 56px !important;
+  }
+}
+
+.clear:after{content:".";display:block;height:0rem;visibility:hidden;clear:both;}/*清除浮动*/
+.active:active{opacity: 0.8;}

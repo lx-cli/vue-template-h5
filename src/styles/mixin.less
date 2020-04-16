@@ -1,0 +1,148 @@
+// 背景图片地址和大小
+.background(@url) {
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+// 背景图片地址和大小
+.background2(@url) {
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+//pc端适配宽度
+.adaptWidth {
+  max-width: 1560px;
+  min-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+//pc端适配宽度
+.adaptWidthNopadding {
+  max-width: 1560px;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+//transform上下左右居中
+.ctt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+//定位上下左右居中
+.ctp(@width, @height) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -@height / 2;
+  margin-left: -@width / 2;
+}
+
+//定位上下居中
+.tb {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位左右居中
+.lr {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//宽高
+.wh(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+//flex 布局和 子元素 对其方式
+.fj(@direction: column, @type: flex-start) {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: @direction;
+  justify-content: @type;
+  > div {
+    flex-direction: column;
+  }
+}
+
+// 溢出省略
+.tc(@width,@center: 0 auto) {
+  display: block;
+  max-width: @width;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: @center;
+}
+
+// 多行文本溢出省略(默认两行)
+.tc2(@num:2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @num;
+  -webkit-box-orient: vertical;
+}
+
+//清除标签默认样式
+.rs {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  border: 0 none;
+  background: none;
+  padding: 0;
+  margin: auto;
+  outline: none;
+}
+
+.boxToCenter {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  display: -o-box;
+  -o-box-orient: horizontal;
+  -o-box-pack: center;
+  -o-box-align: center;
+
+  display: -ms-box;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+
+  display: flexbox;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}
+
+//清除浮动
+.clearfix() {
+  &:after,
+  &:before {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
